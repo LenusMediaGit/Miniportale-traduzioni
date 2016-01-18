@@ -86,3 +86,8 @@ local.properties
 !/www/modules/bootstrap/
 /www/conf/*
 !/www/conf/*.def.*
+
+# miniportale
+!/www/modules/custom/
+!/www/conf/*
+!/config.xml
