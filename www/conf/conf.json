@@ -5,6 +5,6 @@
     "skipAjaxCheck": false,
     "customScript": "modules/custom/src/custom.js",
     "loadType": "iframe",
-    "iframeTarget": "body",
+    "iframeTarget": "#iframe-wrapper",
     "evalPostMessage": false
 }
