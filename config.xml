@@ -8,6 +8,7 @@
         Lenus Media
     </author>
     <icon src="logo.png" />
+    <content src="src/main.html" />
     <icon gap:platform="winphone" src="logo.png" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="portrait" />

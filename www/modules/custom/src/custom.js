@@ -1,6 +1,6 @@
 "use strict";
 
-function dateOfBirth() {
+function customScript() {
     var l = navigator.languages instanceof Array && navigator.languages.length > 0 ? navigator.languages[0] : (navigator.language || navigator.userLanguage);
     l = l.split("-");
     l = (l[0]).toLowerCase();
@@ -26,9 +26,22 @@ function dateOfBirth() {
 
     jQuery("#wrapper").load(Paths.URL_TEMPLATE + "wrapper.html", function () {
         jQuery("#logo").attr("src", Paths.URL_DATA + "img/logo.png");
+        
+        appFramework.loadExternal({
+            onReady: function () {
+                var iframe = jQuery("#iframe-wrapper");
 
-        appFramework.loadExternal();
+                // just 2 tricks to make fading working on android:
+                // 1) use css instead of jquery fade
+                // 2) set a small timeout after iframe ready before "launche" the animation ( workaround )
+                window.setTimeout(function () {
+                    iframe.addClass("fade-in");
+                    jQuery("#wrapper-table").remove();
+                }, 500);
+
+            }
+        });
     });
 }
 
-dateOfBirth();
+customScript();
