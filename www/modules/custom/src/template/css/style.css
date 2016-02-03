@@ -31,3 +31,25 @@ html, body, #wrapper-table {
     width:100%;
     height: 100%;
 }
+
+#iframe-wrapper {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    opacity:0;
+    -webkit-transition: opacity 1.5s ease-in;
+    -moz-transition: opacity 1.5s ease-in;
+    -o-transition: opacity 1.5s ease-in;
+}
+
+#iframe-wrapper.fade-out
+{
+    opacity:0 !important;
+}
+
+#iframe-wrapper.fade-in
+{
+    opacity:1 !important;
+}
